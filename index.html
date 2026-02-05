@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Sixth Sense</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Lotto Number Generator</h1>
+            <button id="theme-toggle">Theme</button>
         </header>
         <main>
-            <div id="numbers-container"></div>
-            <button id="generate-btn">Generate Numbers</button>
+            <div id="visual-container"></div>
+            <div class="lotto-container">
+                <h1>오늘의 번호</h1>
+                <div id="numbers-container"></div>
+                <button id="generate-btn">생성</button>
+            </div>
         </main>
     </div>
     <script src="main.js"></script>
