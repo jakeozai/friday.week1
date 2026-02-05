@@ -12,7 +12,7 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     transition: background-color 0.5s, color 0.5s;
     margin: 0;
-    overflow: hidden;
+    /* overflow: hidden; */ /* Remove this to allow scrolling if content overflows */
 }
 
 body.dark-mode {
@@ -26,7 +26,7 @@ body.dark-mode {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh; /* Changed height to min-height to allow content to push it */
 }
 
 header {
@@ -46,9 +46,11 @@ header {
 main {
     flex-grow: 1;
     display: flex;
+    flex-direction: column; /* Changed to column to stack lottery and form vertically */
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 20px; /* Added padding to main */
 }
 
 #visual-container {
@@ -64,6 +66,7 @@ main {
 .lotto-container {
     text-align: center;
     z-index: 1;
+    margin-bottom: 40px; /* Space between lotto and form */
 }
 
 h1 {
@@ -134,4 +137,49 @@ h1 {
     background: var(--text-color);
     opacity: 0.1;
     animation: weird-shape 15s ease-in-out infinite;
+}
+
+/* Contact Form Styles */
+.contact-form-section {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    border: 1px solid var(--text-color);
+}
+
+.contact-form-section h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 25px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--text-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button[type="submit"] {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--text-color);
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    width: 100%;
 }
