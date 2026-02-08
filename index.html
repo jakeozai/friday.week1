@@ -5,26 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오늘의 로또 번호 생성기 - Sixth Sense</title>
     <meta name="google-site-verification" content="byqvkr-xLi8oFQF_NuYntXKkd_n4NNGTNisViDR-t00" />
-    <meta name="description" content="매일 새로운 로또 번호를 받아보세요! Sixth Sense는 당신의 행운을 위한 번호 생성기입니다.">
-    <meta name="keywords" content="로또, 로또 번호, 번호 생성기, 오늘의 번호, 행운의 번호, sixthsense">
+    <meta name="description" content="매일 새로운 로또 번호를 받아보세요! Sixth Sense는 당신의 행운을 위한 번호 생성기입니다. AI가 추천하는 행운의 번호를 지금 확인해보세요.">
+    <meta name="keywords" content="로또, 로또 번호, 번호 생성기, 오늘의 번호, 행운의 번호, sixthsense, AI, 인공지능 로또">
     <link rel="canonical" href="https://jakeozai.github.io/friday.week1/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jakeozai.github.io/friday.week1/">
     <meta property="og:title" content="오늘의 로또 번호 생성기 - Sixth Sense">
-    <meta property="og:description" content="매일 새로운 로또 번호를 받아보세요! Sixth Sense는 당신의 행운을 위한 번호 생성기입니다.">
+    <meta property="og:description" content="매일 새로운 로또 번호를 받아보세요! Sixth Sense는 당신의 행운을 위한 번호 생성기입니다. AI가 추천하는 행운의 번호를 지금 확인해보세요.">
     <meta property="og:image" content="https://jakeozai.github.io/friday.week1/favicon.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://jakeozai.github.io/friday.week1/">
     <meta property="twitter:title" content="오늘의 로또 번호 생성기 - Sixth Sense">
-    <meta property="twitter:description" content="매일 새로운 로또 번호를 받아보세요! Sixth Sense는 당신의 행운을 위한 번호 생성기입니다.">
+    <meta property="twitter:description" content="매일 새로운 로또 번호를 받아보세요! Sixth Sense는 당신의 행운을 위한 번호 생성기입니다. AI가 추천하는 행운의 번호를 지금 확인해보세요.">
     <meta property="twitter:image" content="https://jakeozai.github.io/friday.week1/favicon.svg">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>G</text></svg>">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sixth Sense",
+      "url": "https://jakeozai.github.io/friday.week1/",
+      "logo": "https://jakeozai.github.io/friday.week1/favicon.svg"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Sixth Sense는 어떤 서비스인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sixth Sense는 사용자의 행운을 위해 매일 새로운 로또 번호를 생성해주는 서비스입니다. 간단한 버튼 클릭만으로 6개의 행운 번호를 받아보실 수 있습니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "로또 번호는 어떻게 생성되나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "번호는 1부터 45까지의 숫자 중에서 무작위로 6개를 선택하여 생성됩니다. 모든 번호는 공정하고 무작위적인 알고리즘을 통해 추출됩니다."
+        }
+      },{
+        "@type": "Question",
+        "name": "이 서비스는 무료인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "네, Sixth Sense 로또 번호 생성기는 완전히 무료로 이용하실 수 있습니다."
+        }
+      }]
+    }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS08F7JGN4"></script>
     <script>
@@ -51,11 +91,29 @@
         </header>
         <main>
             <div id="visual-container"></div>
-            <div class="lotto-container">
-                <h1>오늘의 번호</h1>
+            <section class="lotto-container">
+                <h1>AI가 추천하는 오늘의 행운 번호</h1>
+                <p>버튼을 눌러 AI가 생성한 당신만을 위한 로또 번호를 확인해보세요!</p>
                 <div id="numbers-container"></div>
-                <button id="generate-btn">생성</button>
-            </div>
+                <button id="generate-btn">번호 생성</button>
+            </section>
+            
+            <section class="faq-section">
+                <h2>자주 묻는 질문 (FAQ)</h2>
+                <div class="faq-item">
+                    <h3>Sixth Sense는 어떤 서비스인가요?</h3>
+                    <p>Sixth Sense는 사용자의 행운을 위해 매일 새로운 로또 번호를 생성해주는 서비스입니다. 간단한 버튼 클릭만으로 6개의 행운 번호를 받아보실 수 있습니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>로또 번호는 어떻게 생성되나요?</h3>
+                    <p>번호는 1부터 45까지의 숫자 중에서 무작위로 6개를 선택하여 생성됩니다. 모든 번호는 공정하고 무작위적인 알고리즘을 통해 추출됩니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>이 서비스는 무료인가요?</h3>
+                    <p>네, Sixth Sense 로또 번호 생성기는 완전히 무료로 이용하실 수 있습니다.</p>
+                </div>
+            </section>
+
             <section class="contact-form-section">
                 <h2>제휴 문의</h2>
                 <form action="https://formspree.io/f/xzdapegq" method="POST" class="contact-form">
