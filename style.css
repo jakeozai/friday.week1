@@ -31,16 +31,58 @@ body.dark-mode {
 
 header {
     padding: 20px;
-    text-align: right;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Pushes items to the right */
+    align-items: center; /* Vertically aligns items */
+}
+
+.nav-button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--text-color);
+    padding: 12px 25px; /* Increased padding */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Added bold font weight */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 10px; /* Space between buttons */
+    display: inline-block; /* Treat as a block for padding/margin */
+    border-radius: 8px; /* More pronounced rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+    background-color: red !important; /* Temporary for debugging */
+}
+
+.nav-button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 #theme-toggle {
     background: var(--button-bg);
     color: var(--button-text);
     border: 1px solid var(--text-color);
-    padding: 10px 20px;
+    padding: 12px 25px; /* Increased padding */
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold; /* Added bold font weight */
+    margin-left: 10px; /* Add margin to separate from new buttons */
+    border-radius: 8px; /* More pronounced rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+    background-color: red !important; /* Temporary for debugging */
+}
+
+#theme-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 main {
