@@ -149,16 +149,20 @@ p {
     border-radius: 10px;
 }
 
-.faq-item h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
+.faq-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    word-break: keep-all; /* Prevents words from breaking in the middle */
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* Existing p style for lotto-container or global if needed */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    word-break: keep-all; /* Apply to all paragraphs to prevent awkward breaks */
 }
+
 
 .contact-form input, .contact-form textarea {
     width: 100%;
