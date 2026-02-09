@@ -1,11 +1,5 @@
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
 const numbersContainer = document.getElementById('numbers-container');
 const generateBtn = document.getElementById('generate-btn');
-
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-});
 
 function generateNumbers() {
     const numbers = new Set();
@@ -18,10 +12,11 @@ function generateNumbers() {
 
 function displayNumbers(numbers) {
     numbersContainer.innerHTML = '';
-    numbers.forEach(number => {
+    numbers.forEach((number, index) => {
         const numberElement = document.createElement('div');
         numberElement.classList.add('number');
         numberElement.textContent = number;
+        numberElement.style.animationDelay = `${index * 0.1}s`;
         numbersContainer.appendChild(numberElement);
     });
 }
